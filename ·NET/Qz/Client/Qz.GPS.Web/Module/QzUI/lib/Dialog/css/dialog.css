@@ -25,7 +25,7 @@
     text-align: right;
 }
 
-.btn-a {
+.btn-b {
     line-height: 25px;
     padding: 0 5px;
     cursor: pointer;
@@ -33,7 +33,7 @@
     color:#fff;
     border-radius:5px;
 }
-.btn-a:hover{
+.btn-b:hover{
     text-decoration: underline;
 }
 

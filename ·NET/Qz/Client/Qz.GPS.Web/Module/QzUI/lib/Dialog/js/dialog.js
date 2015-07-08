@@ -28,11 +28,11 @@
     },
 
     btns = {
-        yes: '<a class="btn-a p-3-13" data-id="yes">是</a>',
-        no: '<a class="btn-a p-3-13" data-id="no">否</a>',
-        ok: '<a class="btn-a" data-id="ok">确   定</a>',
-        cancel: '<a class="btn-a" data-id="cancel">取  消</a>',
-        submit: '<a class="btn-a" data-id="submit">提  交</a>'
+        yes: '<a class="btn-b p-3-13" data-id="yes">是</a>',
+        no: '<a class="btn-b p-3-13" data-id="no">否</a>',
+        ok: '<a class="btn-b" data-id="ok">确   定</a>',
+        cancel: '<a class="btn-b" data-id="cancel">取  消</a>',
+        submit: '<a class="btn-b" data-id="submit">提  交</a>'
     };
 
     /**
@@ -101,6 +101,7 @@
                 proxy: true
             });
 
+            this.box.init();
         }
 
         return this;

@@ -60,11 +60,18 @@ namespace Qz.GPS.Web.Core
             {
                 if (SessionModule.ListData.Count > 0)
                 {
-                    
+
                     this.PageId = controller.Substring(0, 1).ToLower() + controller.Substring(1);
 
                     var module = SessionModule.ListData.Where(x => !string.IsNullOrEmpty(x.URL) && ("/" + controller).Equals(x.URL)).FirstOrDefault() ?? new ViewModel.Module();
                     this.ModuleId = module.Id;
+
+                    // 验证是否具有访问权限 
+                    if (this.ModuleId == 0)
+                    {
+                        this.ModuleId = -1;
+                    }
+
                 }
             }
             else
@@ -72,11 +79,21 @@ namespace Qz.GPS.Web.Core
                 this.PageId = controller.Substring(0, 1).ToLower() + controller.Substring(1) + action;
             }
 
+            if (this.ModuleId < 0)
+            {
+                return;
+            }
+
             base.OnActionExecuting(filterContext);
         }
 
         protected override void OnActionExecuted(ActionExecutedContext filterContext)
         {
+            // 若没有访问权限 , 则 return 
+            if (this.ModuleId < 0)
+            {
+                return;
+            }
 
             base.OnActionExecuted(filterContext);
         }

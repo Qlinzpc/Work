@@ -110,12 +110,17 @@
             $(this.dom).css(this.config.css);
         }
 
+        if ($api.dom(this._header, 'div:first-child')) {
+            $api.css($api.dom(this._header, 'div:first-child'), 'width: {0}px'.format(this.dom.clientWidth - $api.dom(this._header, 'div:last-child').clientWidth - 1));
+        }
+
     };
 
     // 打开 
     Box.prototype.open = function () {
         var _this = this;
 
+        $api.show(this.parent);
         $api.show(this.config.id);
 
         if (this.config.mask)
@@ -126,7 +131,6 @@
             _this.mask = $api.dom("div.l-mask[data-box-id='" + _this.config.id + "']");
 
             $api.css(_this.mask, 'z-index:' + (++o.Index));
-
         }
 
         $api.css(this.config.id, 'z-index:' + (++o.Index));
