@@ -93,6 +93,7 @@ namespace Qz.GPS.Web.Core
             if (this.ModuleId < 0)
             {
                 return;
+
             }
 
             base.OnActionExecuted(filterContext);

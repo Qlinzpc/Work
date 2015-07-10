@@ -16,6 +16,7 @@
         show: false,
         mask: true,
         icon: 'icon-win',
+        overlay: false,
         close: true,
         css: null,
         parent: '',
@@ -45,6 +46,7 @@
     // 属性 
     Box.prototype = {
         mask: {},
+        overlay:{},
         dom: {},
         config: {},
         parent:null,
@@ -70,7 +72,7 @@
             if (this.config.close) {
                 // 关闭 
                 $api.addEvt($api.dom(_target, '.icon-box-close'), 'click', function () {
-                    _box.close();
+                    _box.close.call(_box);
                 });
             } else {
                 $api.remove($api.dom(_target, '.icon-box-close'));
@@ -119,7 +121,7 @@
     // 打开 
     Box.prototype.open = function () {
         var _this = this;
-
+        
         $api.show(this.parent);
         $api.show(this.config.id);
 
@@ -131,6 +133,21 @@
             _this.mask = $api.dom("div.l-mask[data-box-id='" + _this.config.id + "']");
 
             $api.css(_this.mask, 'z-index:' + (++o.Index));
+        }
+
+        if (this.config.overlay)
+        {
+            // 覆盖层 
+            $api.append($api.dom('body'), '<div class="overlay" style="display:block;" data-box-id="' + _this.config.id + '"></div>');
+
+            _this.overlay = $api.dom('.overlay');
+
+            $api.css(_this.overlay, 'z-index:' + (++o.Index));
+
+            $api.addEvt(_this.overlay, 'click', function () {
+                _this.close.call(_this);
+            });
+
         }
 
         $api.css(this.config.id, 'z-index:' + (++o.Index));
@@ -153,6 +170,12 @@
                 $api.remove(_this.mask);
 
             }, 700);
+        }
+
+        if (this.config.overlay) {
+            // 覆盖层 
+            _this.overlay = $api.dom('.overlay');
+            $api.remove(_this.overlay);
         }
 
         $api.hide(this.config.id);

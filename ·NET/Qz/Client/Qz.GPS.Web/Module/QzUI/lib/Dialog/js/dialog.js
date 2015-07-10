@@ -209,8 +209,8 @@
                 css.left = pWidth - width;
                 break;
             case "bottom":
-                css.top = pHeight - height - 15;
-                css.left = pWidth - width - 15;
+                css.top = pHeight - height;
+                css.left = pWidth - width;
                 break;
             case "bottom-center":
                 css.top = pHeight - height;

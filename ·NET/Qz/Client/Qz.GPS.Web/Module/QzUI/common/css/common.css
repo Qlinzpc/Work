@@ -156,6 +156,7 @@ table {
     top: 5px;
     font-weight: 300;
     font-size: 11px;
+    display:none;
 }
 
 .l-mask {
@@ -178,6 +179,16 @@ table {
     height: 100%;
     background: rgba(0,0,0,.1);
     display: none;
+}
+
+.overlay{
+    top:0;
+    left:0;
+    background:#fff;
+    opacity: 0.0001;
+    width:100%;
+    height:100%;
+    position:absolute;
 }
 
 .loading {

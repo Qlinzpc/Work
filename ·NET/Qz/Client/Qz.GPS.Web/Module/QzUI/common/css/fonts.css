@@ -1,21 +1,29 @@
-﻿@font-face { font-family: 'QzIcon'; 
+﻿@font-face { font-family: 'Qzero-icon'; 
              src: url('/Module/QzUI/common/fonts/fontawesome-webfont.eot?#iefix&v=4.0.3') format('embedded-opentype'), 
                  url('/Module/QzUI/common/fonts/fontawesome-webfont.woff?v=4.0.3') format('woff'), 
                  url('/Module/QzUI/common/fonts/fontawesome-webfont.ttf?v=4.0.3') format('truetype'), 
                  url('/Module/QzUI/common/fonts/fontawesome-webfont.svg?v=4.0.3#fontawesomeregular') format('svg'); }
 
 [class^=icon-], [class*=" icon-"] {
-font-family: QzIcon;
-cursor: pointer;
-display: inline-block; 
-font-style: normal;
-font-weight: 400;
-font-variant: normal;
-line-height: 1;
-text-transform: none;
-speak: none;
--webkit-font-smoothing: antialiased;
--moz-osx-font-smoothing: grayscale;
+    font-family: Qzero-icon;
+    cursor: pointer;
+    display: inline-block; 
+    font-style: normal;
+    font-weight: 400;
+    font-variant: normal;
+    line-height: 1;
+    text-transform: none;
+    speak: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-check{
+    color: #ED8729;
+    font-size:18px;
+}
+.icon-check:before{
+    content: "\f06e";
 }
 
 .fa { 

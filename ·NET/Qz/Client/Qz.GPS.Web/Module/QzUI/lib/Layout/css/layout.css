@@ -90,22 +90,44 @@
     .icon-nav:before {
         content: "\f0ae";
     }
-    .icon-user::before{
+
+    .icon-user::before {
         content: "\f007";
     }
 
-.icon-skin, .icon-pc, .icon-exit {
-    font-size: 28px;
+.header-menu .icon {
+    font-size: 28px !important;
 }
 
-    .icon-skin:before {
-        content: "\f18c";
-    }
+.icon-sql:before {
+    content: "\f044";
+}
 
-    .icon-pc:before {
-        content: "\f0f0";
-    }
+.icon-system:before {
+    content: "\f109";
+}
 
-    .icon-exit:before {
-        content: "\f0a4";
-    }
+.icon-theme:before{
+    content: "\f0f1";
+}
+
+.icon-skin:before {
+    content:"\f0e3";
+}
+
+.icon-pc:before {
+    content: "\f0f0";
+}
+
+.icon-exit:before {
+    content: "\f0a4";
+}
+
+.icon-logo{
+    padding: 0 5px;
+    color: #E0A658;
+}
+
+.icon-logo:before{
+    content:"\f06e";
+}
