@@ -142,13 +142,14 @@
     <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
-    <Compile Include="Controllers\QzeroController.cs" />
+    <Compile Include="Controllers\QizeroController.cs" />
     <Compile Include="Controllers\RoleModuleButtonController.cs" />
     <Compile Include="Controllers\RoleModuleController.cs" />
     <Compile Include="Controllers\SysModuleButtonController.cs" />
     <Compile Include="Controllers\SysModuleController.cs" />
     <Compile Include="Controllers\RoleController.cs" />
     <Compile Include="Controllers\SysLogController.cs" />
+    <Compile Include="Controllers\QThemeController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Core\Authorize\SysAuthorize.cs" />
     <Compile Include="Core\Controller\BaseController.cs" />
@@ -194,6 +195,31 @@
     <Content Include="Content\QzUI\QzUI.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="Module\QzUI\base\css\skin\15.css" />
+    <Content Include="Module\QzUI\base\css\skin\16.css" />
+    <Content Include="Module\QzUI\base\css\skin\17.css" />
+    <Content Include="Module\QzUI\base\css\skin\18.css" />
+    <Content Include="Module\QzUI\base\css\skin\1.css" />
+    <Content Include="Module\QzUI\base\css\skin\2.css" />
+    <Content Include="Module\QzUI\base\css\skin\3.css" />
+    <Content Include="Module\QzUI\base\css\skin\4.css" />
+    <Content Include="Module\QzUI\base\css\skin\5.css" />
+    <Content Include="Module\QzUI\base\css\skin\6.css" />
+    <Content Include="Module\QzUI\base\css\skin\7.css" />
+    <Content Include="Module\QzUI\base\css\skin\8.css" />
+    <Content Include="Module\QzUI\base\css\skin\9.css" />
+    <Content Include="Module\QzUI\base\css\skin\10.css" />
+    <Content Include="Module\QzUI\base\css\skin\11.css" />
+    <Content Include="Module\QzUI\base\css\skin\12.css" />
+    <Content Include="Module\QzUI\base\css\skin\13.css" />
+    <Content Include="Module\QzUI\base\css\skin\14.css" />
+    <Content Include="Module\QzUI\base\css\skin\default.css" />
+    <Content Include="Module\QzUI\base\css\skin\skin.css">
+      <DependentUpon>skin.scss</DependentUpon>
+    </Content>
+    <Content Include="Module\QzUI\base\css\skin\skin.min.css">
+      <DependentUpon>skin.css</DependentUpon>
+    </Content>
     <Content Include="Module\QzUI\base\js\base.js" />
     <Content Include="Module\QzUI\common\css\animate.css" />
     <Content Include="Module\QzUI\common\css\common.css" />
@@ -413,6 +439,10 @@
     <Content Include="Scripts\echarts\src\util\mapData\rawData\geoJson\xi_zang_geo.json" />
     <Content Include="Scripts\echarts\src\util\mapData\rawData\geoJson\yun_nan_geo.json" />
     <Content Include="Scripts\echarts\src\util\mapData\rawData\geoJson\zhe_jiang_geo.json" />
+    <Content Include="Module\QzUI\base\css\skin\skin.scss" />
+    <Content Include="Module\QzUI\base\css\skin\skin.css.map">
+      <DependentUpon>skin.css</DependentUpon>
+    </Content>
     <None Include="Service References\Service\Service1.wsdl" />
     <None Include="Service References\Service\Service1.xsd" />
     <None Include="Service References\TestService\Service1.disco" />
@@ -429,6 +459,66 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <Content Include="Scripts\zrender\animation\Animation.js" />
+    <Content Include="Scripts\zrender\animation\Clip.js" />
+    <Content Include="Scripts\zrender\animation\easing.js" />
+    <Content Include="Scripts\zrender\config.js" />
+    <Content Include="Scripts\zrender\dep\excanvas.js" />
+    <Content Include="Scripts\zrender\dep\excanvas2.js" />
+    <Content Include="Scripts\zrender\dep\excanvas3.js" />
+    <Content Include="Scripts\zrender\Group.js" />
+    <Content Include="Scripts\zrender\Handler.js" />
+    <Content Include="Scripts\zrender\Layer.js" />
+    <Content Include="Scripts\zrender\loadingEffect\Bar.js" />
+    <Content Include="Scripts\zrender\loadingEffect\Base.js" />
+    <Content Include="Scripts\zrender\loadingEffect\Bubble.js" />
+    <Content Include="Scripts\zrender\loadingEffect\DynamicLine.js" />
+    <Content Include="Scripts\zrender\loadingEffect\Ring.js" />
+    <Content Include="Scripts\zrender\loadingEffect\Spin.js" />
+    <Content Include="Scripts\zrender\loadingEffect\Whirling.js" />
+    <Content Include="Scripts\zrender\macro.js" />
+    <Content Include="Scripts\zrender\mixin\Eventful.js" />
+    <Content Include="Scripts\zrender\mixin\Transformable.js" />
+    <Content Include="Scripts\zrender\Painter.js" />
+    <Content Include="Scripts\zrender\shape\Base.js" />
+    <Content Include="Scripts\zrender\shape\BezierCurve.js" />
+    <Content Include="Scripts\zrender\shape\Circle.js" />
+    <Content Include="Scripts\zrender\shape\Droplet.js" />
+    <Content Include="Scripts\zrender\shape\Ellipse.js" />
+    <Content Include="Scripts\zrender\shape\Heart.js" />
+    <Content Include="Scripts\zrender\shape\Image.js" />
+    <Content Include="Scripts\zrender\shape\Isogon.js" />
+    <Content Include="Scripts\zrender\shape\Line.js" />
+    <Content Include="Scripts\zrender\shape\Path.js" />
+    <Content Include="Scripts\zrender\shape\Polygon.js" />
+    <Content Include="Scripts\zrender\shape\Polyline.js" />
+    <Content Include="Scripts\zrender\shape\Rectangle.js" />
+    <Content Include="Scripts\zrender\shape\Ring.js" />
+    <Content Include="Scripts\zrender\shape\Rose.js" />
+    <Content Include="Scripts\zrender\shape\Sector.js" />
+    <Content Include="Scripts\zrender\shape\ShapeBundle.js" />
+    <Content Include="Scripts\zrender\shape\Star.js" />
+    <Content Include="Scripts\zrender\shape\Text.js" />
+    <Content Include="Scripts\zrender\shape\Trochoid.js" />
+    <Content Include="Scripts\zrender\shape\util\dashedLineTo.js" />
+    <Content Include="Scripts\zrender\shape\util\PathProxy.js" />
+    <Content Include="Scripts\zrender\shape\util\smoothBezier.js" />
+    <Content Include="Scripts\zrender\shape\util\smoothSpline.js" />
+    <Content Include="Scripts\zrender\Storage.js" />
+    <Content Include="Scripts\zrender\tool\area.js" />
+    <Content Include="Scripts\zrender\tool\color.js" />
+    <Content Include="Scripts\zrender\tool\computeBoundingBox.js" />
+    <Content Include="Scripts\zrender\tool\curve.js" />
+    <Content Include="Scripts\zrender\tool\env.js" />
+    <Content Include="Scripts\zrender\tool\event.js" />
+    <Content Include="Scripts\zrender\tool\guid.js" />
+    <Content Include="Scripts\zrender\tool\http.js" />
+    <Content Include="Scripts\zrender\tool\log.js" />
+    <Content Include="Scripts\zrender\tool\math.js" />
+    <Content Include="Scripts\zrender\tool\matrix.js" />
+    <Content Include="Scripts\zrender\tool\util.js" />
+    <Content Include="Scripts\zrender\tool\vector.js" />
+    <Content Include="Scripts\zrender\zrender.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -440,16 +530,20 @@
     <Content Include="Views\Application\Edit.cshtml" />
     <Content Include="Views\Error\Q404.cshtml" />
     <Content Include="Views\Error\Q500.cshtml" />
-    <Content Include="Views\Qzero\Index.cshtml" />
-    <Content Include="Views\Qzero\Skin.cshtml" />
-    <Content Include="Views\Qzero\System.cshtml" />
-    <Content Include="Views\Qzero\PersonCenter.cshtml" />
-    <Content Include="Views\Qzero\Theme.cshtml" />
+    <Content Include="Views\Qizero\Index.cshtml" />
+    <Content Include="Views\Qizero\Skin.cshtml" />
+    <Content Include="Views\Qizero\System.cshtml" />
+    <Content Include="Views\Qizero\PersonCenter.cshtml" />
+    <Content Include="Views\Qizero\Theme.cshtml" />
+    <Content Include="Views\QTheme\Win7.cshtml" />
+    <Content Include="Views\QTheme\Win8.cshtml" />
+    <Content Include="Views\QTheme\WinQuickMenu.cshtml" />
+    <Content Include="Views\QTheme\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Module\QzUI\base\css\" />
     <Folder Include="Module\QzUI\lib\Store\css\" />
+    <Folder Include="Module\QzUI\lib\Timeline\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
