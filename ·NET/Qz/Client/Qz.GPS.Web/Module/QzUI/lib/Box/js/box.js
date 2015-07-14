@@ -84,6 +84,8 @@
             if (this.config.header) {
                 this._header = $api.dom(_target, '.box-header');
                 $api.show(this._header);
+            } else {
+                $api.remove($api.dom(_target, '.box-header'));
             }
 
             // 显示 footer 
@@ -91,6 +93,8 @@
             {
                 this._footer = $api.dom(_target, '.box-footer');
                 $api.show(this._footer);
+            } else {
+                $api.remove($api.dom(_target, '.box-footer'));
             }
         }
 

@@ -6,7 +6,7 @@ using System.Web.Mvc;
 
 namespace Qz.GPS.Web.Controllers
 {
-    public class QzeroController : Controller
+    public class QizeroController : Controller
     {
         //
         // GET: /Qzero/

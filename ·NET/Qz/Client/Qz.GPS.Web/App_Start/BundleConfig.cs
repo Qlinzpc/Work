@@ -40,9 +40,11 @@ namespace Qz.GPS.Web.App_Start
 
             #region CSS
             bundles.Add(new StyleBundle("~/Qz/css").Include(
+                "~/Module/QzUI/base/css/skin/default.css",
                 "~/Module/QzUI/common/css/common.css",
                 "~/Module/QzUI/common/css/animate.css",
                 "~/Module/QzUI/common/css/fonts.css",
+                "~/Module/QzUI/lib/ContextMenu/css/contextMenu.css",
                 "~/Module/QzUI/lib/Layout/css/layout.css",
                 "~/Module/QzUI/lib/Box/css/box.css",
                 "~/Module/QzUI/lib/Menu/css/menu.css",

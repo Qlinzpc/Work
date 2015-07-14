@@ -1,5 +1,4 @@
 ﻿.box {
-    border: 1px solid #149b70;
     width: 90%;
     position: absolute;
     left: 5%;
@@ -16,12 +15,9 @@
     height: 26px;
     line-height: 24px;
     width: 100%;
-    background: #149b70;
     padding: 1px 0;
-    border-bottom: 1px solid #149b70;
     position: relative;
     display: none;
-    color: #fff;
     -webkit-user-select: none;
 }
 

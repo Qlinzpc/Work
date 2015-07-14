@@ -1,7 +1,7 @@
 ﻿/*html {font-size:15px} body{font-family:\5FAE\8F6F\96C5\9ED1,\5B8B\4F53,Arial;}  @media screen and (min-width:480px) and (max-width:639px) { html {font-size: 15px;} body{font-family:\5FAE\8F6F\96C5\9ED1,\5B8B\4F53,Arial;} } @media screen and (min-width:640px) and (max-width:719px) { html {font-size: 20px} body{font-family:\5FAE\8F6F\96C5\9ED1,\5B8B\4F53,Arial;} } @media screen and (min-width:720px) and (max-width:749px) { html {font-size: 22.5px} body{font-family:\5FAE\8F6F\96C5\9ED1,\5B8B\4F53,Arial;} } @media screen and (min-width:750px) and (max-width:799px) { html {font-size: 23.5px} body{font-family:\5FAE\8F6F\96C5\9ED1,\5B8B\4F53,Arial;} } @media screen and (min-width:800px) and (max-width:959px) { html {font-size: 25px} body{font-family:\5FAE\8F6F\96C5\9ED1,\5B8B\4F53,Arial;} } @media screen and (min-width:960px) and (max-width:1079px) { html {font-size: 30px} body{font-family:\5FAE\8F6F\96C5\9ED1,\5B8B\4F53,Arial;} } @media screen and (min-width:1080px) { html {font-size: 32px;font-family:\5FAE\8F6F\96C5\9ED1,\5B8B\4F53,Arial;} }*/
 
 /* Common CSS */
-html, body {
+body {
     font-family: '微软雅黑';
     font-size: 14px;
     -webkit-touch-callout: none;
@@ -13,7 +13,7 @@ html, body {
     background-color: #fff;
 }
 
-html, body, header, section, footer, div, ul, ol, li, img, a, span, em, del, legend, center, strong, var, fieldset, form, label, dl, dt, dd, cite, input, hr, time, mark, code, figcaption, figure, textarea, h1, h2, h3, h4, h5, h6, p {
+body, header, section, footer, div, ul, ol, li, img, a, span, em, del, legend, center, strong, var, fieldset, form, label, dl, dt, dd, cite, input, hr, time, mark, code, figcaption, figure, textarea, h1, h2, h3, h4, h5, h6, p {
     margin: 0;
     border: 0;
     padding: 0;
@@ -59,7 +59,9 @@ a, a:visited {
 }
 
 label {
+    -ms-word-wrap: break-word;
     word-wrap: break-word;
+    -ms-word-break: break-all;
     word-break: break-all;
 }
 
@@ -203,10 +205,8 @@ table {
 }
 
     .loading > div {
-        z-index: 9999;
         width: 30px;
         height: 30px;
-        background-color: #149b70;
         border-radius: 100%;
         display: inline-block;
         -webkit-animation: loading 1.4s infinite ease-in-out;
@@ -220,7 +220,6 @@ table {
     }
 
     .loading .loading1 {
-        z-index: 9999;
         -webkit-animation-delay: -0.32s;
         -moz-animation-delay: -0.32s;
         -o-animation-delay: -0.32s;
@@ -228,7 +227,6 @@ table {
     }
 
     .loading .loading2 {
-        z-index: 9999;
         -webkit-animation-delay: -0.16s;
         -moz-animation-delay: -0.16s;
         -o-animation-delay: -0.16s;
@@ -295,7 +293,6 @@ table {
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: rgba(20,155,119,.8);
     border-radius: 10px;
     -webkit-box-shadow: inset 1px 1px 0 rgba(0,0,0,.1);
 }

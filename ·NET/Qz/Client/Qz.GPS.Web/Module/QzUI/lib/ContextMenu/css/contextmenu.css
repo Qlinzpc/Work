@@ -19,17 +19,12 @@
         }
 
     .context-menu li:not([class=disabled]):hover{
-        background: #149b70 !important;
-        color:#fff;
         cursor: pointer;
-    }
-
-    .context-menu li:not([class=disabled]):hover .icon{
-        color:#fff;
     }
 
     .context-menu .disabled,.context-menu .disabled .icon {
         color:#dcdcdc;
+        cursor:not-allowed;
     }
 
     .context-menu .split-line {

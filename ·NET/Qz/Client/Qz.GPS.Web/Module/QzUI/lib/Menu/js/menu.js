@@ -22,6 +22,9 @@
             theme: 'accordion',
             multiple: false
         },
+        toggle: {
+            click: function () { }
+        },
         parent: '',
         page: {},
         ajax: {
@@ -49,6 +52,9 @@
         dom: '',
         page: {},
         config: {},
+        toggle: {
+            dom: null
+        },
         box: {}
     };
 
@@ -99,7 +105,12 @@
                 break;
             case 'accordion':
             default:
-                $api.prepend(this.config.title.dom, '<div class="menu-title"><i class="icon {icon}"></i><span>{txt}</span><i class="icon icon-sys-menu"></i></div>'.format( this.config.title ));
+                $api.prepend(this.config.title.dom, '<div class="menu-title"><i class="icon {icon}"></i><span>{txt}</span><i class="icon icon-sys-menu"></i></div>'.format(this.config.title));
+
+                this.toggle.dom = $api.dom(this.config.title.dom, '.icon-sys-menu');
+                $api.addEvt(this.toggle.dom, 'click', function () {
+                    $api.trigger(_menu.config.toggle.click());
+                });
                 break;
         }
 

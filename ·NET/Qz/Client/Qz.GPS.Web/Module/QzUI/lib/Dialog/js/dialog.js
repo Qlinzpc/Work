@@ -28,11 +28,11 @@
     },
 
     btns = {
-        yes: '<a class="btn-b p-3-13" data-id="yes">是</a>',
-        no: '<a class="btn-b p-3-13" data-id="no">否</a>',
-        ok: '<a class="btn-b" data-id="ok">确   定</a>',
-        cancel: '<a class="btn-b" data-id="cancel">取  消</a>',
-        submit: '<a class="btn-b" data-id="submit">提  交</a>'
+        yes: '<a class="btn btn-b p-3-13" data-id="yes">是</a>',
+        no: '<a class="btn btn-b p-3-13" data-id="no">否</a>',
+        ok: '<a class="btn btn-b" data-id="ok">确   定</a>',
+        cancel: '<a class="btn btn-b" data-id="cancel">取  消</a>',
+        submit: '<a class="btn btn-b" data-id="submit">提  交</a>'
     };
 
     /**
